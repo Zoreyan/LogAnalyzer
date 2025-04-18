@@ -126,9 +126,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+import os
 # Фильтруем только наши приложения
 APPS = [app.split(".")[-1] for app in INSTALLED_APPS if not app.startswith('django')]
 
+os.makedirs('logs', exist_ok=True)
 
 LOGGING = {
     'version': 1,
