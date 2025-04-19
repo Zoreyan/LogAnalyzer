@@ -1,4 +1,4 @@
-from logger.log_parser import get_log_files, parse_log_statuses
+from log_parser import get_log_files, parse_log_statuses
 from report_factory import ReportFactory
 
 

@@ -1,8 +1,6 @@
 import pytest
-from logger.log_parser import *
 from base_report import BaseReport
-from handlers_report import HandlersReport
-
+from log_parser import *
 
 
 class FakeReport(BaseReport):
@@ -41,7 +39,7 @@ def test_sum_each_log_level(sample_stats):
 def test_sum_total_requests(sample_stats):
     report = FakeReport(sample_stats)
     result = report.sum_total_requests()
-    assert result == 34  # сумма всех чисел кроме строк (имён)
+    assert result == 34  # сумма всех чисел кроме строк
 
 
 def test_format_handler_data(sample_stats):

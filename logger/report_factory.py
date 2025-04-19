@@ -1,5 +1,4 @@
 from handlers_report import HandlersReport
-from errors_report import ErrorsReport
 from base_report import BaseReport
 
 class ReportFactory:
@@ -10,7 +9,6 @@ class ReportFactory:
     
     reports = {
         "handlers": HandlersReport,
-        'errors': ErrorsReport
         # Другие отчеты
     }
 
